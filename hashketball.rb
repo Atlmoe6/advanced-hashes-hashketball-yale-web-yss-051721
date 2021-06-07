@@ -188,12 +188,12 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds 
-   biggest = 0
-  rebounds = 0
+  biggest_shoes = 0 
+  rebounds = 0 
   game_hash.each do |home_away, keys|
     keys[:players].each do |player|
       size = player[:shoe]
-      if size > biggest
+      if size > biggest_shoes
         biggest = size
         rebounds = player[:rebounds]
       end
@@ -201,7 +201,6 @@ def big_shoe_rebounds
   end
   rebounds
 end
-
 
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
