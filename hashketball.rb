@@ -190,6 +190,18 @@ end
 def big_shoe_rebounds 
   biggest_shoes = 0 
   rebounds = 0
+ 
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player|
+      size = player[:shoe]
+      if size > biggest_shoes
+        biggest_shoes = size
+        rebounds = player[:rebounds]
+      end
+    end
+  end
+  rebounds
+end
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
 #   returns an `Array` of the jersey numbers for that team.
