@@ -175,7 +175,7 @@ def player_numbers(team_name)
     if keys[:team_name] == team_name
       return keys[:players].map { |player| player[:number] }
     end
-  end
+  
   # eric moy
 end
 
