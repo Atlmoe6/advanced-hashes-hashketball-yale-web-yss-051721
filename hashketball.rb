@@ -169,9 +169,15 @@ def team_names
   [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end 
 
+
 def player_numbers(team_name)
-  team(team_name)[:players].map do |key, value|
-    value[:number]
+  game_hash.each do |home_away, keys|
+    if keys[:team_name] == team_name
+      return keys[:players].map { |player| player[:number] }
+    end
+  end
+  # eric moy
+end
 
   end
   
