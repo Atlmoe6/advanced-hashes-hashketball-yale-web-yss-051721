@@ -189,6 +189,7 @@ end
 
 def big_shoe_rebounds 
   biggest_shoes = 0 
+  rebounds = 0 
   
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
